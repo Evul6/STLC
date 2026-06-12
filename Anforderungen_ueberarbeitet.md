@@ -13,6 +13,9 @@
 | R7   | Es muss eine maximale Zeichenanzahl für Kommentare definiert werden. |
 | R8   | Jeder Bewertungseintrag benötigt eine eindeutige ID (RatingID). |
 
+
+Details: Nur eingeloggte Nutzer, die ein Produkt gekauft haben können eine Produktbewertung abgeben. Pro Nutzer ist eine Bewertung pro Produkt erlaubt; eine erneute Abgabe überschreibt die vorherige. Die Bewertung erfolgt durch Auswahl von 1 bis 5 Sternen, wobei die Sternauswahl ein Pflichtfeld ist. Das schriftliche Feedback ist optional und auf maximal 500 Zeichen begrenzt. Das System zeigt bei Überschreitung des Zeichenlimits eine Fehlermeldung an und verhindert das Speichern. Die angezeigte Durchschnittsbewertung auf der Produktkarte wird als arithmetisches Mittel aller abgegebenen Bewertungen berechnet und auf eine Nachkommastelle gerundet.
+
 ---
 
 ## 🗂️ Feature 2 – Altersverifikation
@@ -26,6 +29,8 @@
 | R13  | Das System muss klar definieren, ob die Prüfung tagesgenau erfolgt. |
 | R14  | Jeder Verifikationsprozess benötigt eine eindeutige Session-/User-ID-Zuordnung. |
 
+Details: Nur eingeloggte Nutzer, die ein Produkt gekauft haben können eine Produktbewertung abgeben. Pro Nutzer ist eine Bewertung pro Produkt erlaubt; eine erneute Abgabe überschreibt die vorherige. Die Bewertung erfolgt durch Auswahl von 1 bis 5 Sternen, wobei die Sternauswahl ein Pflichtfeld ist. Das schriftliche Feedback ist optional und auf maximal 500 Zeichen begrenzt. Das System zeigt bei Überschreitung des Zeichenlimits eine Fehlermeldung an und verhindert das Speichern. Die angezeigte Durchschnittsbewertung auf der Produktkarte wird als arithmetisches Mittel aller abgegebenen Bewertungen berechnet und auf eine Nachkommastelle gerundet.
+
 ---
 
 ## 🗂️ Feature 3 – Versandkosten
@@ -38,3 +43,5 @@
 | R18  | Versandkosten müssen sowohl korrekt angezeigt als auch berechnet werden. |
 | R19  | Es muss definiert werden, ob Checkout Login voraussetzt. |
 | R20  | Jeder Warenkorb benötigt eine eindeutige Cart-ID. |
+
+Details: Ab einem Produktsubtotal von genau €20,00 oder mehr ist der Versand kostenlos. Liegt der Subtotal unter €20,00, werden Versandkosten in Höhe von €5,00 erhoben. Der Schwellenwert bezieht sich auf den Subtotal nach Abzug etwaiger Rabatte oder Gutscheincodes. Die Versandkostenanzeige im Warenkorb und im Checkout aktualisiert sich dynamisch, sobald der Subtotal den Schwellenwert über- oder unterschreitet – ohne Seitenneuladung. Bei einem Subtotal von genau €20,00 entfallen die Versandkosten (inklusiver Grenzwert).
